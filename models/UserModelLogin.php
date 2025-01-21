@@ -29,11 +29,6 @@ class UserModel {
     }
 }
 
-// Example usage
-$data = [
-    'gebruikersnaam' => 'johndoe',
-    'wachtwoord' => 'securepassword123',
-];
 
 $user = UserModel::login($data);
 if ($user) {

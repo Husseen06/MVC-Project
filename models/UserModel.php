@@ -24,4 +24,39 @@ class UserModel {
             return false;
         }
     }
+
+    // Voeg andere methoden en eigenschappen toe die je nodig hebt
+
+    public static function login($data) {
+        // Maak verbinding met de database
+        $conn = new mysqli('localhost', 'root', '', 'mvcproject');
+
+        // Controleer de verbinding
+        if ($conn->connect_error) {
+            die("Verbinding mislukt: " . $conn->connect_error);
+        }
+
+        // Bereid de SQL-instructie voor
+        $stmt = $conn->prepare("SELECT * FROM users WHERE gebruikersnaam = ?");
+        $stmt->bind_param("s", $data['gebruikersnaam']);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+            // Controleer het wachtwoord
+            if (password_verify($data['wachtwoord'], $user['wachtwoord'])) {
+                return $user;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+
+        // Sluit de verbinding
+        $stmt->close();
+        $conn->close();
+    }
 }
+?>
