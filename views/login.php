@@ -10,19 +10,14 @@
 <body>
   <div class="box">
     <h1>Login</h1>
-    <form method="POST" action="../controllers/UserController.php">
+    <form action="../controllers/UserControllerLogin.php" method="post">
       <div class="txt_field">
-        <input type="email" required id="email" name="email" />
-        <span></span>
-        <label for="email">Email</label>
-      </div>
-      <div class="txt_field">
-        <input type="text" required id="gebruikersnaam" name="gebruikersnaam" />
+        <input type="text" name="gebruikersnaam" placeholder="Gebruikersnaam" required>
         <span></span>
         <label for="gebruikersnaam">Gebruikersnaam</label>
       </div>
       <div class="txt_field">
-        <input type="password" required id="wachtwoord" name="wachtwoord" />
+        <input type="password" name="wachtwoord" placeholder="Wachtwoord" required>
         <span></span>
         <label for="wachtwoord">Wachtwoord</label>
       </div>

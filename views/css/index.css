@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("../../afbeeldingen/achter.png");
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-section {
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFC107;
+    /* Goud */
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+.barcalogo {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    /* Achtergrondlogo */
+}
+
+.barcalogo img {
+    max-width: 600px;
+    height: auto;
+}
+
+.player {
+    position: relative;
+    left: -55px;
+    z-index: 1;
+}
+
+.player img {
+    height: 700px;
+    width: 600px;
+}
+
+/* Login-knop rechtsboven */
+.login-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background: #E50914;
+    /* Bordeauxrood */
+    color: #FFFFFF;
+    /* Wit */
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20%;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #BF0812;
+    /* Donkerder rood */
+}
+
+.login-btn i {
+    font-size: 20px;
+    margin-right: 0px;
+}

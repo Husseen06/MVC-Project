@@ -21,7 +21,7 @@ if (isset($_POST['register'])) {
 
     if ($userCreated) {
         // Redirect naar loginpagina als registratie succesvol is
-        header('Location: ../views/login.html');
+        header('Location: ../views/login.php');
         exit;
     } else {
         echo "Registratie mislukt. Probeer het opnieuw.";
