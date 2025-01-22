@@ -23,6 +23,11 @@ $user = $_SESSION['user'];
 </head>
  
 <body>
+
+<a href="index.php" class="home-button">
+    <i class="fas fa-home"></i>
+  </a>
+
   <div class="dashboard-box">
     <h1>Welkom, <?php echo htmlspecialchars($user['gebruikersnaam']); ?>!</h1>
     <p class="dashboard-content">Wat wil je vandaag doen?</p>
@@ -36,7 +41,7 @@ $user = $_SESSION['user'];
       </a>
       <a href="logout.php" class="button logout">
         <i class="fas fa-sign-out-alt"></i> Uitloggen
-      </a>
+     </a> 
     </div>
   </div>
 </body>

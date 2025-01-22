@@ -79,6 +79,25 @@ body {
   background: #CC0000; /* Donkerder rood */
 }
 
+.home-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
 @media (max-width: 600px) {
   .dashboard-box {
     width: 90%;
