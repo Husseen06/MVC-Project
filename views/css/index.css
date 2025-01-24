@@ -25,22 +25,19 @@ body {
     justify-content: space-between;
 }
 
-.text-section {
-    max-width: 400px;
-}
-
 h1 {
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #FFC107;
-    /* Goud */
-    margin-bottom: 1rem;
+    max-width: 500px;
+
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #FFFFFF;
+    max-width: 400px;
 }
 
 .barcalogo {
@@ -59,13 +56,13 @@ p {
 
 .player {
     position: relative;
-    left: -55px;
+    left: -155px;
     z-index: 1;
 }
 
 .player img {
-    height: 700px;
-    width: 600px;
+    height: 500px;
+    width: 400px;
 }
 
 /* Login-knop rechtsboven */
@@ -98,3 +95,26 @@ p {
     font-size: 20px;
     margin-right: 0px;
 }
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #E50914;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 600;
+    color: #E50914;
+    cursor: pointer;
+}
+
