@@ -10,7 +10,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: #2c2c2e; /* Donkerblauw */
+  background-image: url("../../afbeeldingen/achter.png");
+
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -81,21 +82,26 @@ body {
 
 .home-button {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 24px;
-  color: #333;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background: #E50914;
+  /* Bordeauxrood */
+  color: #FFFFFF;
+  /* Wit */
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
   text-decoration: none;
-  background-color: #f0f0f0;
-  padding: 10px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .home-button:hover {
-  background-color: #333;
-  color: #fff;
+  background: #BF0812;
 }
 
 @media (max-width: 600px) {
