@@ -1,0 +1,166 @@
+@font-face {
+    font-family: Font1;
+    src: url(../../barselona.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Font1;
+    background-image: url('../../afbeeldingen/achter.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.player-details {
+    text-align: center;
+    background: rgb(0,77,144);
+    background: linear-gradient(90deg, rgba(0,77,144,1) 50%, rgba(165,0,64,1) 50%);
+    color: #edbb00;
+    width: 250px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #edbb00 3px solid;
+}   
+
+.player-details img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.player-details p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+
+
+/* Algemene instellingen voor invoeg-animaties */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Player Details Animatie */
+.player-details {
+    text-align: center;
+    background: rgb(0,77,144);
+    background: linear-gradient(90deg, rgba(0,77,144,1) 50%, rgba(165,0,64,1) 50%);
+    color: #edbb00;
+    width: 250px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: #edbb00 3px solid;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Afbeelding Animatie */
+.player-details img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover-effect voor de afbeelding zonder schaduw */
+.player-details img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Statistieken Animatie */
+.player-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    opacity: 0;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Statistieken verschijnen één voor één */
+#player-matches {
+    animation-delay: 0.8s;
+}
+
+#player-clean-sheets, #player-goals {
+    animation-delay: 1s;
+}
+
+#player-saves, #player-assists {
+    animation-delay: 1.2s;
+}
+
+/* Hover-effect voor de tekst */
+.player-details p:hover {
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Stijl voor de terug-knop */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Font1;
+    color: #edbb00;
+    background-color: rgba(0, 77, 144, 0.9);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #edbb00;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animatie en hover-effect */
+.back-button:hover {
+    background-color: #edbb00;
+    color: rgb(0, 77, 144);
+    transform: scale(1.1);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back-button span {
+    font-size: 20px;
+    margin-right: 5px;
+    transition: margin-right 0.3s ease;
+}
+
+.back-button:hover span {
+    margin-right: 10px;
+}
+
+/* Schaduw en smooth animaties */
+.back-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
