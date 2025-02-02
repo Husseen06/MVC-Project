@@ -11,6 +11,10 @@
 <body>
   <div class="box">
     <h1>Registratie</h1>
+    <?php if (isset($_GET['error']) && $_GET['error'] === 'gebruikersnaam_bestaat'): ?>
+    <p style="color: red; text-align: center;">Deze gebruikersnaam is al in gebruik. Kies een andere.</p>
+<?php endif; ?>
+
     <form method="POST" action="../controllers/UserController.php" onsubmit="return validatePassword()">
       <div class="txt_field">
         <input type="text" required id="naam" name="naam" />
